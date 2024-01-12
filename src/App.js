@@ -15,5 +15,6 @@ function App() {
     </BrowserRouter>
   );
 }
-
+// 15min break: 
+// React hooks
 export default App;
