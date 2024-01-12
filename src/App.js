@@ -1,17 +1,18 @@
 import "./App.css";
-import Task from "./Components/Task";
-
+import Navbar from "./Components/Navbar";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// SPA --- single page application
 function App() {
-        const tasklist = ["Work on bug #21","Api call","Check with FE","Machine learning algo"]
   return (
-    <center>
-      <h1>React To-do 🌟</h1>
-      <input type="text" className="inp" /> 
-      <button id="add">Add</button>
-      {
-        tasklist.map((v,i)=> <Task key={i} data={v} /> )
-      }
-    </center>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cont" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
