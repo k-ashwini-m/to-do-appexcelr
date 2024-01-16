@@ -8,19 +8,18 @@ export default function Home() {
     "Machine learning algo",
   ]);
   const [inp,setInp] = useState("")
-  const [count, setCount] = useState(0);
- 
+const inpfun=(e)=>{
+        setInp(e.target.value);
+}
+
   return (
     <center>
       <h1>React To-do 🌟</h1>
-      <input type="text" className="inp" onChange={(e)=>{setInp(e.target.value)}} />
+      <input type="text" className="inp" onChange={inpfun} />
       <button id="add" onClick={()=>setTasklist([...tasklist, inp])}>Add</button>
       {tasklist.map((v, i) => (
         <Task key={i} data={v} />
       ))}
-      <h1> {count} </h1>
-      <button onClick={()=>{setCount(count+1)}}>Inc</button>
-      <button onClick={()=>{setCount(count-1)}}>Dec</button>
     </center>
   );
 }
