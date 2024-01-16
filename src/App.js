@@ -10,8 +10,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cont" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
+      <h1>Footer</h1>
     </BrowserRouter>
   );
 }
