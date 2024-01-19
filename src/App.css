@@ -39,3 +39,11 @@
 .task h2{
         font-weight: 400;
 }
+
+.navbar a{
+        background: #fcd53f;
+        margin: 5px;
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+}
